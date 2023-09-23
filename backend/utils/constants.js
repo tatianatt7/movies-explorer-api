@@ -1,0 +1,47 @@
+const {
+  constants: {
+    HTTP_STATUS_BAD_REQUEST,
+    HTTP_STATUS_CONFLICT,
+    HTTP_STATUS_NOT_FOUND,
+    HTTP_STATUS_OK,
+    HTTP_STATUS_CREATED,
+    HTTP_STATUS_UNAUTHORIZED,
+    HTTP_STATUS_FORBIDDEN,
+    HTTP_STATUS_INTERNAL_SERVER_ERROR,
+  },
+} = require('http2');
+
+const MESSAGE_ERROR_WRONG_USER_DATA = 'Некорректные данные почты или пароля';
+const MESSAGE_ERROR_UNAUTHORIZED = 'Небходима авторизация';
+const MESSAGE_ERROR_NOT_VALID = 'Данные не валидны';
+const MESSAGE_ERROR_CAST = 'Некорректный ID';
+const MESSAGE_ERROR_SERVER = 'Ошибка сервера';
+const MESSAGE_ERROR_FORBIDDEN_DELETE = 'Удаление запещено';
+const MESSAGE_ERROR_CONFLICT = 'Пользователь уже существует';
+const MESSAGE_ERROR_NOT_FOUND = 'Данные не найдены';
+const MESSAGE_ERROR_NOT_FOUND_USER = 'Пользователь с таким ID не найден';
+const MESSAGE_ERROR_NOT_FOUND_CARD = 'Карточка с указанным ID не найдена';
+
+const URL_REGEXP = /^(https?:\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:;/~+#-]*[\w@?^=%&/~+#-])?$/;
+
+module.exports = {
+  URL_REGEXP,
+  HTTP_STATUS_BAD_REQUEST,
+  HTTP_STATUS_CONFLICT,
+  HTTP_STATUS_CREATED,
+  HTTP_STATUS_NOT_FOUND,
+  HTTP_STATUS_OK,
+  HTTP_STATUS_UNAUTHORIZED,
+  HTTP_STATUS_FORBIDDEN,
+  HTTP_STATUS_INTERNAL_SERVER_ERROR,
+  MESSAGE_ERROR_NOT_VALID,
+  MESSAGE_ERROR_CAST,
+  MESSAGE_ERROR_SERVER,
+  MESSAGE_ERROR_NOT_FOUND_USER,
+  MESSAGE_ERROR_CONFLICT,
+  MESSAGE_ERROR_FORBIDDEN_DELETE,
+  MESSAGE_ERROR_NOT_FOUND,
+  MESSAGE_ERROR_UNAUTHORIZED,
+  MESSAGE_ERROR_NOT_FOUND_CARD,
+  MESSAGE_ERROR_WRONG_USER_DATA,
+};
